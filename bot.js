@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Ahmed ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Al3amri `,"http://twitch.tv/Ahmed")
+client.user.setGame(`Letto `,"http://twitch.tv/Ahmed")
 client.user.setStatus("dnd")
 });
 
