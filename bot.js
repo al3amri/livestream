@@ -1,7 +1,23 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-
-client.on("message", message =>{
+const Baron = new Discord.Client();
+const prefix = '$';
+Baron.on("ready", ()=>{
+Baron.user.setActivity('Baron#1500 Development', {type : 'watching'});
+console.log('Loding')
+setTimeout(() => {
+  console.log('Loding.')//Baron#1500
+}, 500)
+setTimeout(() => {
+  console.log('Loding..')//Baron#1500
+}, 1000)
+setTimeout(() => {
+  console.log('Loding...')//Baron#1500
+}, 1500)
+setTimeout(() => {
+  console.log(`Logged as ${Baron.user.tag}`)//Baron#1500
+}, 2000)
+})
+Baron.on("message", message =>{//Baron#1500
 //السطر ال تحت لمنع تكرار انشاء الرتب لو عاوز تغير اسم الرتب غيرها وحط اسمها فى السطر ال تحت كمان علشان ميحصلش سبام
 let roles = message.guild.roles.find(all=> all.name === "⇁『KiNG 』‏‏༄  ❥", "⇁『LEADER』‏‏༄  ❥", "⇁『BiG BOSS 』‏‏༄  ❥", "⇁『CAPTAIN 』‏‏༄  ❥", "⇁『SERGEANT 』‏‏༄  ❥",
 "⇁『youtuber 』‏‏༄  ❥", "⇁『ACTIVE 』‏‏༄  ❥");//Baron#1500
@@ -21,8 +37,8 @@ if(message.content.startsWith(prefix + "roles")) {//Baron#1500
   }
 let roleleader = message.guild.roles.find(r => r.name === "⇁『LEADER』‏‏༄  ❥");//Baron#1500
 if(!roleleader) {
- message.guild.createRole({
-    name: '⇁『LEADER』‏‏༄  ❥',
+ message.guild.createRole({//Baron#1500
+    name: '⇁『LEADER』‏‏༄  ❥',//Baron#1500
     color: 'RANDOM',
     position: (2),//Baron#1500
     hoist: (true),
@@ -30,25 +46,25 @@ if(!roleleader) {
         'SEND_TTS_MESSAGES', 'MANAGE_MESSAGES', 'EMBED_LINKS', 'ATTACH_FILES', 'READ_MESSAGE_HISTORY', 'MENTION_EVERYONE', 'CONNECT', 'SPEAK', 'MUTE_MEMBERS', 'DEAFEN_MEMBERS',
          'MOVE_MEMBERS', 'USE_VAD', 'CHANGE_NICKNAME', 'MANAGE_NICKNAMES'],
 })
-}
+}//Baron#1500
 let rolebigboss = message.guild.roles.find(r => r.name === "⇁『BiG BOSS 』‏‏༄  ❥");//Baron#1500
-if(!rolebigboss) {
+if(!rolebigboss) {//Baron#1500
   message.guild.createRole({
     name: '⇁『BiG BOSS 』‏‏༄  ❥',
     color: 'RANDOM',
-     position: (3),
+     position: (3),//Baron#1500
      hoist: (true),
     permissions: ['CREATE_INSTANT_INVITE', 'KICK_MEMBERS', 'ADD_REACTIONS', 'VIEW_CHANNEL', 'READ_MESSAGES', 'SEND_MESSAGES', 'MANAGE_MESSAGES', 'EMBED_LINKS', 'ATTACH_FILES', 'CONNECT', 'SPEAK', 'MUTE_MEMBERS', 'DEAFEN_MEMBERS',
     'READ_MESSAGE_HISTORY', 'MENTION_EVERYONE', 'MOVE_MEMBERS', 'USE_VAD', 'CHANGE_NICKNAME', 'MANAGE_NICKNAMES']
 })
-}
+}//Baron#1500
 let rolecaptain = message.guild.roles.find(r => r.name === "⇁『CAPTAIN 』‏‏༄  ❥");//Baron#1500
-if(!rolecaptain) {
+if(!rolecaptain) {//Baron#1500
 message.guild.createRole({
     name: '⇁『CAPTAIN 』‏‏༄  ❥',
     color: 'RANDOM',
     postion: (4),
-    hoist: (true),
+    hoist: (true),//Baron#1500
     permissions: ['VIEW_CHANNEL', 'READ_MESSAGES', 'SEND_MESSAGES', 'MANAGE_MESSAGES', 'EMBED_LINKS', 'ATTACH_FILES', 'CONNECT', 'SPEAK', 'MUTE_MEMBERS', 'DEAFEN_MEMBERS',
     'READ_MESSAGE_HISTORY', 'MENTION_EVERYONE', 'MOVE_MEMBERS', 'USE_VAD', 'CHANGE_NICKNAME']
 })
@@ -264,41 +280,41 @@ ch.overwritePermissions(rolecsgo, {
         MENTION_EVERYONE: false
       })//Baron#1500
       })
-        message.guild.createChannel('overwatch' , 'text').then(ch => {
+        message.guild.createChannel('overwatch' , 'text').then(ch => {//Baron#1500
           ch.setParent(tb);
           ch.overwritePermissions(roleow, {
-            SEND_MESSAGES: true,
+            SEND_MESSAGES: true,//Baron#1500
             MENTION_EVERYONE: false
         })
         ch.overwritePermissions(message.guild.id, {
           SEND_MESSAGES: false,
           MENTION_EVERYONE: false
+        })//Baron#1500
         })
-        })
-          message.guild.createChannel('minecraft' , 'text').then(ch => {
+          message.guild.createChannel('minecraft' , 'text').then(ch => {//Baron#1500
             ch.setParent(tb);
             ch.overwritePermissions(rolemc, {
               SEND_MESSAGES: true,
               MENTION_EVERYONE: false
           })
-          ch.overwritePermissions(message.guild.id, {
+          ch.overwritePermissions(message.guild.id, {//Baron#1500
             SEND_MESSAGES: false,
             MENTION_EVERYONE: false
           })
-          })
+          })//Baron#1500
           message.guild.createChannel('league-of-legends' , 'text').then(ch => {
-            ch.setParent(tb);
+            ch.setParent(tb);//Baron#1500
             ch.overwritePermissions(rolelol, {
               SEND_MESSAGES: true,
               MENTION_EVERYONE: false
-          })
+          })//Baron#1500
           ch.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: false,
-            MENTION_EVERYONE: false
+            MENTION_EVERYONE: false//Baron#1500
           })
           })
   })
-  message.guild.createChannel(`.${message.guild.name} | 🔊 .` , 'category').then(tb => {
+  message.guild.createChannel(`.${message.guild.name} | 🔊 .` , 'category').then(tb => {//Baron#1500
   message.guild.createChannel('「الـقـرأن الـكـريــم | 📜」' , 'voice').then(ch => {
     ch.setParent(tb);
     ch.overwritePermissions(message.guild.id, {
@@ -315,40 +331,40 @@ message.guild.createChannel('「Events | 🎲 .」' , 'voice').then(ch => {
   })
 })
 message.guild.createChannel(`.Talking | ✋🏽 .` , 'category').then(tb => {
-  message.guild.createChannel(`「${message.guild.name} | 🔊 .」` , 'voice').then(ch => {
+  message.guild.createChannel(`「${message.guild.name} | 🔊 .」` , 'voice').then(ch => {//Baron#1500
     ch.setParent(tb);
     ch.setUserLimit(50)//Baron#1500
 })
-message.guild.createChannel('「Sounds | ♫ .」' , 'voice').then(ch => {
+message.guild.createChannel('「Sounds | ♫ .」' , 'voice').then(ch => {//Baron#1500
   ch.setParent(tb);
   ch.setUserLimit(50)//Baron#1500
 })
   })
-  message.guild.createChannel(`» Games | الالعاب .` , 'category').then(tb => {
+  message.guild.createChannel(`» Games | الالعاب .` , 'category').then(tb => {//Baron#1500
     message.guild.createChannel(`Fortnite | فورتنآيت .` , 'voice').then(ch => {
-      ch.setParent(tb);
+      ch.setParent(tb);//Baron#1500
       ch.overwritePermissions(message.guild.id, {
         CONNECT: false,
     
     })
     ch.overwritePermissions(rolefortnite, {
-      CONNECT: true,
+      CONNECT: true,//Baron#1500
   
   })
   })//Baron#1500
   message.guild.createChannel('Minecraft | مآينكرآفت' , 'voice').then(ch => {
     ch.setParent(tb);
-    ch.overwritePermissions(message.guild.id, {
+    ch.overwritePermissions(message.guild.id, {//Baron#1500
       CONNECT: false,
   
   })
-  ch.overwritePermissions(rolemc, {
+  ch.overwritePermissions(rolemc, {//Baron#1500
     CONNECT: true,
 
 })
   })//Baron#1500
   message.guild.createChannel(`Creative | كريآتف .` , 'voice').then(ch => {
-    ch.setParent(tb);
+    ch.setParent(tb);//Baron#1500
     ch.overwritePermissions(message.guild.id, {
       CONNECT: false,
   
@@ -358,14 +374,14 @@ message.guild.createChannel('「Sounds | ♫ .」' , 'voice').then(ch => {
 
 })
 })
-message.guild.createChannel('Legends | لوول' , 'voice').then(ch => {
+message.guild.createChannel('Legends | لوول' , 'voice').then(ch => {//Baron#1500
   ch.setParent(tb);
   ch.overwritePermissions(message.guild.id, {
     CONNECT: false,
 
-})
+})//Baron#1500
 ch.overwritePermissions(rolelol, {
-  CONNECT: true,
+  CONNECT: true,//Baron#1500
 
 })
 })
@@ -373,49 +389,48 @@ ch.overwritePermissions(rolelol, {
   message.guild.createChannel(`» DJ | الموسيقي .` , 'category').then(tb => {//Baron#1500
     message.guild.createChannel(`» Art.` , 'voice').then(ch => {
       ch.setParent(tb);
-      ch.setUserLimit(15)
+      ch.setUserLimit(15)//Baron#1500
   })
   message.guild.createChannel(`» Fun.` , 'voice').then(ch => {
     ch.setParent(tb);
     ch.setUserLimit(15)
-})
+})//Baron#1500
 message.guild.createChannel(`» Life.` , 'voice').then(ch => {
   ch.setParent(tb);
-  ch.setUserLimit(15)
+  ch.setUserLimit(15)//Baron#1500
 })
 message.guild.createChannel(`» Sing.` , 'voice').then(ch => {
 ch.setParent(tb);
 ch.setUserLimit(15)
-})
+})//Baron#1500
 })
   message.guild.createChannel(`» Privates | خآص .` , 'category').then(tb => {//Baron#1500
     message.guild.createChannel(`» Single.` , 'voice').then(ch => {
       ch.setParent(tb);
       ch.setUserLimit(1)
-  })
+  })//Baron#1500
   message.guild.createChannel('» Doubles.' , 'voice').then(ch => {
     ch.setParent(tb);
     ch.setUserLimit(2)
-  })
+  })//Baron#1500
   message.guild.createChannel('» Triples.' , 'voice').then(ch => {
     ch.setParent(tb);
     ch.setUserLimit(3)
-  })
+  })//Baron#1500
   message.guild.createChannel('» Forth.' , 'voice').then(ch => {
     ch.setParent(tb);
     ch.setUserLimit(4)
-  })
+  })//Baron#1500
   message.guild.createChannel('» Classic.' , 'voice').then(ch => {
     ch.setParent(tb);
     ch.setUserLimit(10)
-  })
+  })//Baron#1500
   message.guild.createChannel('» Group.' , 'voice').then(ch => {
     ch.setParent(tb);
     ch.setUserLimit(15)
   })
-    }
+    })//Baron#1500
  }
 }
-})
-
-client.login(process.env.BOT_TOKEN)
+})//Baron#1500
+Baron.login('process.env.BOT_TOKEN');
